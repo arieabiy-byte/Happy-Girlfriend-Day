@@ -1,1 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff9ecf,#ffd6ea,#fff0f7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero{
+    width:90%;
+    max-width:430px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    animation:fadeIn 1s ease;
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:42px;
+    color:#ff2d75;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.gallery{
+    margin:20px 0;
+}
+
+.gallery img{
+    width:100%;
+    max-width:300px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid white;
+    box-shadow:0 8px 20
