@@ -73,7 +73,29 @@ animation:fall 6s linear infinite;
 
 <h1>Happy Girlfriend Day ❤️</h1>
 
-<img id="slide" src="IMG-20260103-WA0028.jpg">
+<script>
+const foto = [
+"IMG-20260103-WA0028.jpg",
+"IMG_20251223_223008_847.jpg",
+"IMG_20251223_223206_460.jpg",
+"IMG-20251226-WA0019.jpg",
+"IMG-20251216-WA0038.jpg",
+"IMG-20251216-WA0036.jpg",
+"IMG-20251216-WA0034.jpg",
+"IMG-20251215-WA0006.jpg",
+"IMG-20251215-WA0004.jpg"
+];
+
+let i = 0;
+
+setInterval(() => {
+    i++;
+    if (i >= foto.length) {
+        i = 0;
+    }
+    document.getElementById("slide").src = foto[i];
+}, 2500);
+</script>
 
 <h2>Untuk Kamu ❤️</h2>
 
