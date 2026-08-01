@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend Day ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffb6d9,#ffdbe9);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+color:white;
+width:90%;
+max-width:450px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:15px;
+transition:.5s;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+#letter{
+display:none;
+margin-top:20px;
+line-height:1.7;
+}
+
+.heart{
+position:absolute;
+color:red;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px);}
+100%{transform:translateY(110vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Girlfriend Day ❤️</h1>
+
+<img id="slide" src="IMG-20260103-WA0028.jpg">
+
+<h2>Untuk Kamu ❤️</h2>
+
+<button onclick="openLetter()">Buka Surat 💌</button>
+
+<div id="letter">
+<p>
+Selamat Happy Girlfriend Day ❤️<br><br>
+
+Terima kasih sudah hadir dalam hidupku.
+Semoga kita selalu bersama,
+saling menjaga,
+dan saling mencintai.
+
+I Love You Forever ❤️
+</p>
+
+<audio controls autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+<script>
+
+let foto=[
+"IMG-20260103-WA0028.jpg",
+"IMG_20251223_223008_847.jpg",
+"IMG_20251223_223206_460.jpg",
+"IMG-20251226-WA0019.jpg",
+"IMG-20251216-WA0038.jpg"
+];
+
+
+let i=0;
+
+setInterval(()=>{
+i++;
+if(i>=foto.length)i=0;
+document.getElementById("slide").src=foto[i];
+},2500);
+
+function openLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+},300);
+
+</script>
+
+</body>
+</html>
